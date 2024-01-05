@@ -1,9 +1,11 @@
 function fizzBuzzSingle(n) {
   return (
-    n % 3 === 0 && n % 5 === 0 ? 'FizzBuzz'
-    : n % 3 === 0 ? 'Fizz'
-    : n % 5 === 0 ? 'Buzz'
-    : String(n)
+    ((out) => (
+      (n % 3 === 0 ? out.push("Fizz") : void 0),
+      (n % 5 === 0 ? out.push("Buzz") : void 0),
+      (!out.length ? out.push(String(n)) : void 0),
+      out.join("")
+    ))([])
   );
 }
 
