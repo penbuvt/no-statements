@@ -1,7 +1,7 @@
 function hanoi(diskCount, source = 1, dest = 3, spare = 2) {
   return (
     // Y combinator
-    ((f) => ((x) => f((...args) => (x(x)(...args))))((x) => f((...args) => (x(x)(...args)))))(
+    ((f) => ((g) => g(g))((x) => f((...args) => (x(x)(...args)))))(
       // hanoi solver
       (h) => (n, s, d, p) => (
         n === 0 ? []
