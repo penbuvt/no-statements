@@ -15,7 +15,6 @@ describe('hanoi', () => {
   ].forEach(([n, answer]) => {
     it(`should return ${answer} steps for ${n} rings`, () => {
       const result = hanoi(n);
-      //console.log(result);
 
       assert.equal(result.length, answer);
     });
