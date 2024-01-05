@@ -1,5 +1,5 @@
 function hanoi(diskCount, source = 1, dest = 3, spare = 2) {
-  return ((h, n, s, d, p) => h(h, n, s, d, p))(
+  return ((h, ...args) => h(h, ...args))(
     (h, n, s, d, p) => (
       n === 0 ? []
       : n === 1 ? [[s, d]]
